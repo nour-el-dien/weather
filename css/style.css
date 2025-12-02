@@ -197,6 +197,11 @@ body {
           box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2)
 }
 
+.week-list>li.active {
+  background: #fff;
+  color: #222831;
+  border-radius: 10px;
+}
 
 .week-list>li .day-name {
   display: block;
