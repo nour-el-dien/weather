@@ -9,6 +9,7 @@ weatherDesc= document.getElementById('weather-desc'),
 
 // Change side
 searchBar= document.getElementById('search-bar'),
+cityDropdown= document.getElementById('city-dropdown'),
 locationButton= document.getElementById('location-button'),
 
 // info-side
@@ -46,6 +47,19 @@ async function getDataApi(){
 getDataApi();
 
 
+locationButton.addEventListener('click' ,function(){
+    city=searchBar.value;
+    getDataApi(city)
+})
+
+
+// Add dropdown event listener
+cityDropdown.addEventListener('change', function(){
+    if(this.value){
+        city = this.value;
+        getDataApi();
+    }
+})
 
 function displayToday(){
     let dateDay = new Date(),
